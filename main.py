@@ -8,7 +8,7 @@ if __name__ == "__main__":
     wlst = open("wordle_list.txt",'r').readlines()
     solution = wlst[random.randint(0,len(wlst)-1)]
 
-    print(solution)
+    #print(solution) #you can uncomment this if you want to cheat or bugtest
 
     #initialize game-play loop
     win = False
@@ -34,7 +34,8 @@ if __name__ == "__main__":
         #check win condition
         win = (out_str == "\u2713"*5)
     
+    #display win messages
     if win:
         print("\nYou won in {0} guesses!".format(guessCount))
     else:
-        print("You lose, loser. The solution was: {0}".format(solution))
+        print("\nYou lose, loser. The solution was: {0}".format(solution))
